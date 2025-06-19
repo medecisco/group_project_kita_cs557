@@ -7,8 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
-import com.example.groupprojectkita.models.User; // Assuming you create a User model in 'com.example.groupprojectkita.models'
-import com.example.groupprojectkita.models.Product; // Assuming you create a Product model
+import com.example.groupprojectkita.models.User;
+import com.example.groupprojectkita.models.Product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Database Name and Version
-    private static final String DATABASE_NAME = "Login.db"; // Your preferred database name
+    private static final String DATABASE_NAME = "Login.db";
     private static final int DATABASE_VERSION = 1;
 
     // Table 1: user_table (based on your 'user' table)
@@ -117,7 +117,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return count == 1; // True if exactly one record matches (login successful)
     }
 
-    // Get all users - Read (for displaying user list, e.g., in an admin panel)
+    // Get all users - Read (for displaying user list,in an admin panel)
     public List<User> getAllUsers() {
         List<User> userList = new ArrayList<>();
         String selectQuery = "SELECT * FROM " + TABLE_USERS;
@@ -139,7 +139,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return userList;
     }
 
-    // Update user record - Update (e.g., change name or password)
+    // Update user record - Update (change name or password)
     public boolean updateUser(String oldEmail, String newEmail, String newPassword, String newName) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -178,7 +178,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    // --- Product Table Operations (CRUDS Example) ---
+    // --- Product Table Operations (CRUDS) ---
 
     // Insert a new product (Create)
     public boolean insertProduct(String name, double price, String description) {
