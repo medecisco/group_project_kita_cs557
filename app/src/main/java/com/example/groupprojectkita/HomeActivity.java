@@ -45,7 +45,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        // Example for showing the logged-in user
+
         String loggedInUser = sharedPreferences.getString("loggedInUser", "Guest");
         Toast.makeText(this, "Welcome, " + loggedInUser + "!", Toast.LENGTH_LONG).show();
     }
