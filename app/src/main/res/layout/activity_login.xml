@@ -1,56 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<!-- Login screen: User provides name and password to log in -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
+    <!-- Input: Username -->
     <EditText
-        android:id="@+id/etUsername"
-        android:layout_width="0dp"
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.8"
-        android:layout_marginTop="100dp"/>
+        android:hint="Name"
+        android:layout_marginBottom="10dp" />
 
+    <!-- Input: Password -->
     <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="0dp"
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUsername"
-        app:layout_constraintWidth_percent="0.8"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginBottom="20dp"
+        android:inputType="textPassword" />
 
+    <!-- Button: Log in to the app -->
     <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="0dp"
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        app:layout_constraintWidth_percent="0.8"
-        android:layout_marginTop="24dp"/>
+        android:backgroundTint="@color/purple"
+        android:text="Login" />
 
+    <!-- Button: Navigate to RegisterActivity -->
     <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="0dp"
+        android:id="@+id/button_register"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
-        app:layout_constraintWidth_percent="0.8"
-        android:layout_marginTop="8dp"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:backgroundTint="@color/purple"
+        android:text="Register" />
+</LinearLayout>

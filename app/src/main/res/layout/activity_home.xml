@@ -1,48 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<!-- Home screen: Navigation hub after login -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#FFFFFF">
 
+    <!-- Welcome text display -->
     <TextView
-        android:id="@+id/tvWelcome"
+        android:id="@+id/text_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to the App!"
+        android:text="Welcome"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnManageUsers"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        android:layout_marginBottom="32dp"/>
+        android:layout_marginBottom="40dp"
+        android:textColor="#000000" />
 
+    <!-- Button: Navigate to ManageUserActivity -->
     <Button
-        android:id="@+id/btnManageUsers"
-        android:layout_width="0dp"
+        android:id="@+id/button_manage_user"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Manage Users"
-        app:layout_constraintBottom_toTopOf="@+id/btnManageProducts"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
-        app:layout_constraintWidth_percent="0.7"
-        android:layout_marginTop="16dp"/>
+        android:text="Manage User"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/purple"
+        android:textColor="@android:color/white"
+        android:padding="12dp" />
 
+    <!-- Button: Navigate to ManageProductActivity -->
     <Button
-        android:id="@+id/btnManageProducts"
-        android:layout_width="0dp"
+        android:id="@+id/button_manage_product"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Manage Products"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnManageUsers"
-        app:layout_constraintWidth_percent="0.7"
-        android:layout_marginTop="8dp"/>
+        android:text="Manage Product"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/purple"
+        android:textColor="@android:color/white"
+        android:padding="12dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Button: Log out and return to LoginActivity -->
+    <Button
+        android:id="@+id/button_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textSize="18sp"
+        android:backgroundTint="@color/purple"
+        android:textColor="@android:color/white"
+        android:padding="12dp" />
+
+</LinearLayout>

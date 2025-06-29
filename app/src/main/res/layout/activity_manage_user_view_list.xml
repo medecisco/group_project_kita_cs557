@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Screen that displays all user records in a scrollable TextView -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Text container to display fetched user data -->
+    <TextView
+        android:id="@+id/view_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="20sp"
+        android:text="Text"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:scrollbars="vertical" />
+</ScrollView>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Manage User screen: CRUD operations for users -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Input: User ID (used for update/delete/search) -->
+    <EditText
+        android:id="@+id/edit_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Id"
+        android:layout_margin="10dp"
+        android:inputType="number" />
+
+    <!-- Input Fields -->
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_margin="5dp"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_margin="5dp"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/edit_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile"
+        android:layout_margin="5dp"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:layout_margin="5dp"
+        android:inputType="textPassword" />
+
+    <!-- Action Buttons Row 1: Save & View -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Save new user -->
+        <Button
+            android:id="@+id/button_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textSize="18sp"
+            android:backgroundTint="@color/purple"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
+
+        <!-- View all users -->
+        <Button
+            android:id="@+id/button_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View"
+            android:textSize="18sp"
+            android:backgroundTint="@color/purple"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+
+    <!-- Action Buttons Row 2: Delete & Update -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Delete user by ID -->
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textSize="18sp"
+            android:backgroundTint="@color/purple"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
+
+        <!-- Update existing user -->
+        <Button
+            android:id="@+id/button_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:textSize="18sp"
+            android:backgroundTint="@color/purple"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+
+    <!-- Search user by ID -->
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:textSize="18sp"
+        android:backgroundTint="@color/purple"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp" />
+</LinearLayout>

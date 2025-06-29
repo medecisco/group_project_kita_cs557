@@ -4,11 +4,12 @@ plugins {
 
 android {
     namespace 'com.example.groupprojectkita'
-    compileSdk 35
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.example.groupprojectkita"
-        minSdk 35
+        minSdk 34
+        //noinspection OldTargetApi
         targetSdk 35
         versionCode 1
         versionName "1.0"
